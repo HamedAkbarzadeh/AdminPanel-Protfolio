@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    Wellcome
+    Home
   </main>
 </template>

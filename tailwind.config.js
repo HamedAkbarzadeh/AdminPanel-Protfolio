@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // اگر پروژه‌ت React یا Vite هست
+    "./src/**/*.{js,ts,jsx,tsx,vue}",
   ],
   theme: {
     extend: {},
