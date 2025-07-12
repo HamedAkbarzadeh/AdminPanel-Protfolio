@@ -1,6 +1,6 @@
 <template>
-  <div :class="['sidebar py-4 bg-white h-screen custom flex flex-col items-center ',
-    ui.isSidebarOpen() ? 'w-72' : 'w-16', !ui.isSidebarOpen() && 'sidebar--closed'
+  <aside :class="['py-4 bg-white h-screen custom flex flex-col items-center z-50',
+    ui.isSidebarOpen() ? 'sidebar--open' : 'sidebar--closed',
   ]">
     <HeaderSideBar />
     <UserInfoSideBar v-if="ui.isSidebarOpen()" />
@@ -55,7 +55,7 @@
         </template>
       </ItemSideBar>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script setup>
@@ -71,12 +71,13 @@ const ui = useUiStore();
 </script>
 
 <style scoped>
-.sidebar {
-  transition: transform 0.5s ease;
-  transform: translateX(0);
+.sidebar--open {
+  transition: 0.5s ease;
+  width: 20rem;
 }
 
 .sidebar--closed {
-  transform: translateX(-5%)
+  transition: 0.5s ease;
+  width: 4rem;
 }
 </style>
