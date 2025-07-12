@@ -1,6 +1,6 @@
-# vue-project
+# Admin Panel - Protfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Admin panel for programmers' personal sites
 
 ## Recommended IDE Setup
 
