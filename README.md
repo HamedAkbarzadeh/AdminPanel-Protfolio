@@ -1,4 +1,4 @@
-# vue-project
+# Admin Panel - Protfolio
 
 Admin panel for programmers' personal sites
 
