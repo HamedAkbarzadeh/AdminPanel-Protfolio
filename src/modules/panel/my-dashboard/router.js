@@ -1,4 +1,3 @@
-import ProjectView from "../projects/views/ProjectView.vue";
 import DashboardView from "./views/DashboardView.vue";
 
 export default [
@@ -7,9 +6,5 @@ export default [
     name: 'dashboard',
     component: DashboardView,
   },
-  {
-    path: '/projects',
-    name: 'projects',
-    component: ProjectView,
-  },
+
 ]

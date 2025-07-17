@@ -1,11 +1,11 @@
 <template>
-  <MainContentLayout back-path="/dashboard" create-path="/projects/create">
-    <BaseTable />
+  <MainContentLayout back-path="/dashboard" create-path="/project/create">
+    <BaseForm />
   </MainContentLayout>
 </template>
 
 <script setup>
-import BaseTable from '../../components/BaseTable.vue';
+import BaseForm from '../../components/BaseForm.vue';
 import MainContentLayout from '../../layouts/main-content.layout.vue';
 
 
