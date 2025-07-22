@@ -1,16 +1,9 @@
 <template>
-  <MainContentLayout back-path="/projects">
+  <MainContentLayout back-path="/contacts">
     <BaseForm>
       <div class="flex w-full gap-3">
-        <BaseInput title="title" type="text" placeholder="title..." bind="title" />
-        <BaseInput title="name" type="text" placeholder="project name..." bind="name" />
-      </div>
-      <div class="flex w-full gap-3">
-        <BaseInputFile />
-        <BaseInput title="link" type="text" placeholder="project link..." bind="link" />
-      </div>
-      <div class="flex w-full gap-3">
-        <BaseTextarea placeholder="project description..." title="description" />
+        <BaseSelectbox title="Contact" />
+        <BaseInput title="link" type="text" placeholder="link..." bind="name" />
       </div>
       <div class="flex w-full gap-3">
         <BaseButton title="Submit" class="text-center" />
@@ -24,6 +17,7 @@ import BaseButton from '../../components/BaseButton.vue'
 import BaseForm from '../../components/BaseForm.vue'
 import BaseInput from '../../components/BaseInput.vue'
 import BaseInputFile from '../../components/BaseInputFile.vue'
+import BaseSelectbox from '../../components/BaseSelectbox.vue'
 import BaseTextarea from '../../components/BaseTextarea.vue'
 import MainContentLayout from '../../layouts/main-content.layout.vue'
 </script>

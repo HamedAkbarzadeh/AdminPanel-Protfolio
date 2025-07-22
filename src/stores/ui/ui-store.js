@@ -14,7 +14,6 @@ export const useUiStore = defineStore('ui', () => {
     isSideBarOpen.value = true;
   }
   function isSidebarOpen() {
-    console.log("HI");
 
     return isSideBarOpen.value
   }
