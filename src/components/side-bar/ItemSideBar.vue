@@ -14,7 +14,7 @@
   </RouterLink>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 import { useUiStore } from '@/stores/ui/ui-store';
 import { RouterLink } from 'vue-router';

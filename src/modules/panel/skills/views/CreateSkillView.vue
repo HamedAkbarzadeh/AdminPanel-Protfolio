@@ -13,7 +13,7 @@
   </MainContentLayout>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import BaseButton from '../../components/BaseButton.vue'
 import BaseForm from '../../components/BaseForm.vue'
 import BaseInput from '../../components/BaseInput.vue'

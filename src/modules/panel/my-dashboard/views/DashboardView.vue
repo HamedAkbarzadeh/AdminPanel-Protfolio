@@ -3,8 +3,8 @@
   </mainContentLayout>
 </template>
 
-<script setup>
-  
+<script setup lang="ts">
+
 import mainContentLayout from '../../layouts/main-content.layout.vue';
 
 </script>
