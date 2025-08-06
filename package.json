@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "dotenv -e ./envs/.env.development vite",
+    "build": "dotenv -e ./envs/.env.development vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
@@ -23,6 +23,7 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/eslint-config-prettier": "^10.2.0",
     "autoprefixer": "^10.4.21",
+    "dotenv-cli": "^10.0.0",
     "eslint": "^9.29.0",
     "eslint-plugin-vue": "~10.2.0",
     "globals": "^16.2.0",
