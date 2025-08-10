@@ -3,7 +3,9 @@
     <BaseTable :rows="skillList" :columns="['name', 'rait', 'status', 'setting']">
       <template #row-template="{ row }">
         <BaseTd>{{ row.name }}</BaseTd>
-        <BaseTd>{{ row.rait }}</BaseTd>
+        <BaseTd>
+          <BaseRating v-model="row.rait" />
+        </BaseTd>
         <BaseStatus :isActive="row.status" />
         <BaseSettingOperation />
       </template>
@@ -20,6 +22,7 @@ import { SkillDto } from '../types/skill.type';
 import BaseStatus from '../../components/BaseStatus.vue';
 import BaseSettingOperation from '../../components/BaseSettingOperation.vue';
 import BaseTd from '../../components/BaseTd.vue';
+import BaseRating from '../../components/BaseRating.vue';
 
 const skillList = reactive<Array<SkillDto>>([])
 
