@@ -73,9 +73,27 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const showSettingDropDown = ref(false);
+
+
+import { SkillServiceApi } from 'src/repository/api/skill/skill.service';
+const fetchData = async () => {
+  const [err, resp] = await SkillServiceApi.get()
+  if (err) return
+
+  return {
+    count: resp.data.length,
+    results: resp.data
+  }
+}
+onMounted(async () => {
+  const res = await fetchData()
+  console.log("result : " , res?.results[0]);
+  
+})
+
 </script>
 
 <style lang="scss" scoped></style>
