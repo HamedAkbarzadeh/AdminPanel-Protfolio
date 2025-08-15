@@ -2,7 +2,7 @@
   <MainContentLayout back-path="/skills">
     <BaseForm @submit="onSubmit">
       <div class="col-span-1">
-        <BaseInput label="skill" type="text" placeholder="your skill..." bind="name" />
+        <BaseInput :rule="skillRule" name="skill" label="skill" type="text" placeholder="your skill..." bind="name" />
       </div>
       <div class="col-span-1">
         <BaseRating label="skill rait" v-model="rating" />
@@ -23,6 +23,9 @@ import BaseInput from '../../components/BaseInput.vue'
 import BaseRating from '../../components/BaseRating.vue'
 import BaseRatingbar from '../../components/BaseRatingbar.vue'
 import MainContentLayout from '../../layouts/main-content.layout.vue'
+import * as yup from 'yup';
+
+const skillRule = yup.string().required().min(2);
 
 const rating = ref<number>(0)
 
