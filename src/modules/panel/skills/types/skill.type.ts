@@ -10,3 +10,7 @@ enum StatusType {
     ACTIVE,
     INACTIVE
 }
+
+export interface SkillReq {
+    skill: string
+}
