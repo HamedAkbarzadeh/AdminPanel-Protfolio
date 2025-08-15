@@ -29,8 +29,10 @@ const skillList = reactive<Array<SkillDto>>([])
 const fetchData = async () => {
   const [err, resp] = await SkillServiceApi.get()
 
-  if (err)
-    throw new Error('has error')
+  if (err) {
+    console.error("error : ", err.message);
+    return;
+  }
 
   resp.data.forEach((item: SkillDto) => {
     skillList.push({

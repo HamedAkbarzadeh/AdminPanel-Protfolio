@@ -59,16 +59,15 @@ import HeaderSideBar from './HeaderSideBar.vue'
 import ItemSideBar from './ItemSideBar.vue'
 import UserInfoSideBar from './UserInfoSideBar.vue'
 
-import { useUiStore } from '@/stores/ui/ui-store'
+import { useUiStore } from '../../stores/ui/ui-store'
 
 const ui = useUiStore()
 const activeSelect = Array.from({ length: 4 }, () => ref(false))
 
-const handelActive = (index) => {
+const handelActive = (index: number) => {
   activeSelect[index].value = !activeSelect[index].value
 
   for (let i = 0; i <= 4; i++) {
-    console.log(i)
 
     if (i == index) {
       continue

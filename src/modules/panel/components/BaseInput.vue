@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col w-full">
-    <label v-if="props.title" for="" class="text-white text-lg pt-1">{{ props.title }}</label>
-    <input :type="props.types" class="p-3 rounded-md w-full text-lg" :placeholder="props.placeholder" id="" />
+  <div class="flex flex-col w-full" v-bind="$attrs">
+    <label v-if="label" for="" class="text-lg font-semibold py-1" :class="labelColor">{{ label }}</label>
+    <input :type="types" class="p-3 rounded-md w-full text-lg" :placeholder="placeholder" id="" />
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
-  title: {
+  label: {
     type: String,
     default: '',
   },
@@ -19,6 +19,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  labelColor: {
+    type: String,
+    default: 'text-slate-900'
+  }
 })
 console.log(props.placeholder)
 </script>

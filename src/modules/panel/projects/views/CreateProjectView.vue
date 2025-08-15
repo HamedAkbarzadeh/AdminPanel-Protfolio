@@ -2,12 +2,12 @@
   <MainContentLayout back-path="/projects">
     <BaseForm>
       <div class="flex w-full gap-3">
-        <BaseInput title="title" type="text" placeholder="title..." bind="title" />
-        <BaseInput title="name" type="text" placeholder="project name..." bind="name" />
+        <BaseInput label="title" type="text" placeholder="title..." bind="title" />
+        <BaseInput label="name" type="text" placeholder="project name..." bind="name" />
       </div>
       <div class="flex w-full gap-3">
         <BaseInputFile />
-        <BaseInput title="link" type="text" placeholder="project link..." bind="link" />
+        <BaseInput label="link" type="text" placeholder="project link..." bind="link" />
       </div>
       <div class="flex w-full gap-3">
         <BaseTextarea placeholder="project description..." title="description" />

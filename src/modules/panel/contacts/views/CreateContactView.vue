@@ -3,7 +3,7 @@
     <BaseForm>
       <div class="flex w-full gap-3">
         <BaseSelectbox title="Contact" />
-        <BaseInput title="link" type="text" placeholder="link..." bind="name" />
+        <BaseInput label="link" type="text" placeholder="link..." bind="name" />
       </div>
       <div class="flex w-full gap-3">
         <BaseButton title="Submit" class="text-center" />
