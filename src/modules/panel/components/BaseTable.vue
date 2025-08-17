@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
+  <div class="shadow-lg rounded-lg h-[400px] overflow-y-scroll mx-4 md:mx-10">
     <table class="w-full table-fixed">
       <thead>
         <tr class="bg-gray-100">
