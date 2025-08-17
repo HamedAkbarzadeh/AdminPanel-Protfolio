@@ -4,7 +4,7 @@
       <template #row-template="{ row }">
         <BaseTd>{{ row.name }}</BaseTd>
         <BaseTd>
-          <BaseRating v-model="row.rait" />
+          <BaseRating :can-change="false" v-model="row.rait" />
         </BaseTd>
         <BaseStatus :isActive="row.status" />
         <BaseSettingOperation />
@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import BaseTable from '../../components/BaseTable.vue'
 import MainContentLayout from '../../layouts/main-content.layout.vue'
-import { onMounted, reactive, ref } from 'vue';
+import { onMounted, reactive } from 'vue';
 import { SkillServiceApi } from 'src/repository/api/skill/skill.service';
 import { SkillDto } from '../types/skill.type';
 import BaseStatus from '../../components/BaseStatus.vue';

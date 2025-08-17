@@ -4,19 +4,21 @@ import { ref, defineModel } from 'vue'
 const modelValue = defineModel<number>({ default: 0 })
 
 function setRating(value: number) {
-    modelValue.value = value
+    if (props.canChange)
+        modelValue.value = value
 }
 
-const props = withDefaults(defineProps<{ label?: string, labelColor?: string }>(), {
+const props = withDefaults(defineProps<{ label?: string, labelColor?: string, canChange?: boolean }>(), {
     label: '',
-    labelColor: 'text-slate-900'
+    labelColor: 'text-slate-900',
+    canChange: true
 })
 </script>
 
 <template>
     <div class="flex flex-col gap-y-4 items-center justify-center" v-bind="$attrs">
         <label v-if="label" for="" class="text-lg font-semibold py-1" :class="labelColor">{{ label
-            }}</label>
+        }}</label>
         <div class="flex gap-1">
             <template v-for="i in 5" :key="i">
                 <svg @click="setRating(i)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
