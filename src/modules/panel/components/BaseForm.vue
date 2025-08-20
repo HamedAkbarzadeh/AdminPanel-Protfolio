@@ -1,5 +1,5 @@
 <template>
-  <Form :validation-schema="schema" class="grid grid-cols-2 gap-4 bg-slate-100 rounded-md p-10 w-full"
+  <Form :validation-schema="schema" class="grid grid-cols-2 gap-4 bg-slate-100 rounded-md p-10 w-full h-[400px] overflow-auto"
     @submit="onSubmit">
     <slot />
   </Form>

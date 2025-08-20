@@ -1,5 +1,6 @@
 <template>
   <mainContentLayout haveBack="true">
+    hello
   </mainContentLayout>
 </template>
 

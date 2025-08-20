@@ -1,22 +1,18 @@
 <template>
   <div class="flex flex-col w-full">
-    <label v-if="props.title" for="" class="text-white text-lg pt-1">{{ props.title }}</label>
-    <textarea class="p-3 rounded-md w-full text-lg" :placeholder="props.placeholder"></textarea>
+    <label v-if="label" for="" class="text-lg font-semibold py-1" :class="labelColor">{{ label }}</label>
+    <textarea class="p-3 rounded-md w-full text-lg" :placeholder="placeholder">{{ modelValue }}</textarea>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  title: {
-    type: String,
-    default: '',
-  },
-  placeholder: {
-    type: String,
-    default: '',
-  },
+const props = withDefaults(defineProps<{ label?: string, placeholder?: string, modelValue?: string, rows?: string, cols?: string }>(), {
+  label: '',
+  modelValue: '',
+  placeholder: '',
+  rows: '3',
+  cols: '20'
 })
-console.log(props.placeholder)
 </script>
 
 <style lang="scss" scoped></style>

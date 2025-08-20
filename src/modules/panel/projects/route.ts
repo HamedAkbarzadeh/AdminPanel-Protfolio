@@ -1,17 +1,15 @@
+import ProjectsView from "./views/ProjectView.vue";
 import CreateProjectView from "./views/CreateProjectView.vue";
-import ProjectView from "./views/ProjectView.vue";
 
 export default [
   {
     path: '/projects',
     name: 'projects',
-    component: ProjectView,
+    component: ProjectsView,
   },
   {
     path: '/projects/create',
     name: 'projects.create',
     component: CreateProjectView,
   },
-
-
 ]

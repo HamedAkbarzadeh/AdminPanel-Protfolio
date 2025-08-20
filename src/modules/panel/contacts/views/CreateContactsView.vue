@@ -1,5 +1,5 @@
 <template>
-  <MainContentLayout back-path="/projects">
+  <MainContentLayout back-path="/skills">
     <BaseForm :schema="simpleSchema" @submit="onSubmit">
       <div class="col-span-1">
         <BaseInput name="title" label="title" type="text" placeholder="your title..." />
@@ -8,7 +8,7 @@
       <div class="col-span-1">
         <BaseInputFile label="image"></BaseInputFile>
       </div>
-
+      
       <div class="col-span-2">
         <BaseTextarea label="description" />
       </div>
@@ -41,7 +41,7 @@ import BaseInput from '../../components/BaseInput.vue'
 import BaseRating from '../../components/BaseRating.vue'
 import MainContentLayout from '../../layouts/main-content.layout.vue'
 import * as yup from 'yup';
-import { ContactsReq } from '../types/project.type'
+import { ContactsReq } from '../types/contacts.type'
 import { useRouter } from 'vue-router'
 import { SkillReq } from '../../skills/types/skill.type'
 import { ContactsServiceApi } from 'src/repository/api/content/content.service'

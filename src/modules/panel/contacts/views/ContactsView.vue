@@ -1,6 +1,6 @@
 <template>
-  <MainContentLayout back-path="/dashboard" create-path="/projects/create">
-    <BaseTable :rows="projectList" :columns="['title', 'description', 'image', 'link', 'status', 'setting']">
+  <MainContentLayout back-path="/dashboard" create-path="/contacts/create">
+    <BaseTable :rows="contactList" :columns="['title', 'description', 'image', 'link', 'status', 'setting']">
       <template #row-template="{ row }">
         <BaseTd>{{ row.title }}</BaseTd>
         <BaseTd>{{ row.description }}</BaseTd>
@@ -19,24 +19,24 @@
 import BaseTable from '../../components/BaseTable.vue'
 import MainContentLayout from '../../layouts/main-content.layout.vue'
 import { onMounted, reactive } from 'vue';
-import { ProjectsDto } from '../types/project.type';
+import { ContactsDto } from '../types/contacts.type';
 import BaseStatus from '../../components/BaseStatus.vue';
 import BaseSettingOperation from '../../components/BaseSettingOperation.vue';
 import BaseTd from '../../components/BaseTd.vue';
-import { ProjectsServiceApi } from 'src/repository/api/project/project.service';
+import { ContactsServiceApi } from 'src/repository/api/content/content.service';
 
-const projectList = reactive<Array<ProjectsDto>>([])
+const contactList = reactive<Array<ContactsDto>>([])
 
 const fetchData = async () => {
-  const [err, resp] = await ProjectsServiceApi.get()
+  const [err, resp] = await ContactsServiceApi.get()
 
   if (err) {
     console.error("error : ", err.message);
     return;
   }
 
-  resp.data.forEach((item: ProjectsDto) => {
-    projectList.push({
+  resp.data.forEach((item: ContactsDto) => {
+    contactList.push({
       title: item.title,
       description: item.description,
       image: item.image,
