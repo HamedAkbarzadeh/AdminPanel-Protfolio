@@ -13,5 +13,9 @@ enum ProjectsType {
 }
 
 export interface ProjectsReq {
-  projects: string
+  title: string,
+  image: string,
+  description: string,
+  link: string,
+  status: ProjectsType
 }

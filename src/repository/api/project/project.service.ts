@@ -12,7 +12,7 @@ export class ProjectsServiceApi {
   public static async post(data: any) {
     return await to(api({
       method: 'POST',
-      url: 'protfolios/create',
+      url: 'protfolio/create',
       data
     }))
   }

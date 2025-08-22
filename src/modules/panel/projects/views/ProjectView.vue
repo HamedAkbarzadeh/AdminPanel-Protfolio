@@ -22,7 +22,7 @@ import { onMounted, reactive } from 'vue';
 import { ProjectsDto } from '../types/project.type';
 import BaseStatus from '../../components/BaseStatus.vue';
 import BaseSettingOperation from '../../components/BaseSettingOperation.vue';
-import BaseTd from '../../components/BaseTd.vue';
+import BaseTd from 'src/modules/panel/components/BaseTd.vue';
 import { ProjectsServiceApi } from 'src/repository/api/project/project.service';
 
 const projectList = reactive<Array<ProjectsDto>>([])
